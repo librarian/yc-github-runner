@@ -1,5 +1,5 @@
-name: 'YC GitHub Runner'
-description: 'GitHub Action to deploy container to Yandex Cloud COI VM'
+name: 'Librarian GitHub Runner'
+description: 'GitHub Action to deploy container to Nebius Cloud COI VM'
 author: 'Nikolay Matrosov'
 inputs:
   mode:
