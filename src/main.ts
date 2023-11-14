@@ -6,8 +6,8 @@ import {
   Session,
   waitForOperation,
   WrappedServiceClientType,
-} from '@yandex-cloud/nodejs-sdk';
-import {Instance, IpVersion} from '@yandex-cloud/nodejs-sdk/dist/generated/yandex/cloud/compute/v1/instance';
+} from 'librarian-nodejs-sdk';
+import {Instance, IpVersion} from 'librarian-nodejs-sdk/dist/generated/yandex/cloud/compute/v1/instance';
 import {
   AttachedDiskSpec,
   AttachedDiskSpec_Mode,
@@ -15,7 +15,7 @@ import {
   CreateInstanceRequest,
   DeleteInstanceRequest,
   InstanceServiceService,
-} from '@yandex-cloud/nodejs-sdk/dist/generated/yandex/cloud/compute/v1/instance_service';
+} from 'librarian-nodejs-sdk/dist/generated/yandex/cloud/compute/v1/instance_service';
 import * as yaml from 'js-yaml';
 import {Config, GithubRepo} from './config';
 import {getRegistrationToken, removeRunner, waitForRunnerRegistered} from './gh';
