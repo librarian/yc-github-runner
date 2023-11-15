@@ -29,7 +29,7 @@
     "@actions/github": "^6.0.0",
     "@grpc/grpc-js": "1.9.9",
     "js-yaml": "^4.1.0",
-    "librarian-nodejs-sdk": "^2.6.0"
+    "librarian-nodejs-sdk": "^2.6.1"
   },
   "devDependencies": {
     "@types/js-yaml": "^4.0.8",
