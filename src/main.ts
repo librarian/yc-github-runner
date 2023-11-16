@@ -210,7 +210,6 @@ async function run(): Promise<void> {
 
     const serviceAccountJson = fromServiceAccountJsonFile(JSON.parse(ycSaJsonCredentials));
     core.info('Parsed Service account JSON');
-    core.info(`privateKey${serviceAccountJson.privateKey.toString()}`);
 
     const session = new Session({serviceAccountJson});
     const instanceService = session.client(serviceClients.InstanceServiceClient);
