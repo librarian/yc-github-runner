@@ -1,12 +1,6 @@
 import * as core from '@actions/core';
 import * as github from '@actions/github';
-import {
-  decodeMessage,
-  serviceClients,
-  Session,
-  waitForOperation,
-  WrappedServiceClientType,
-} from 'librarian-nodejs-sdk';
+import {decodeMessage, serviceClients, Session, waitForOperation, WrappedServiceClientType} from 'librarian-nodejs-sdk';
 import {Instance, IpVersion} from 'librarian-nodejs-sdk/dist/generated/yandex/cloud/compute/v1/instance';
 import {
   AttachedDiskSpec,
