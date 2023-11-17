@@ -21,6 +21,8 @@ test('basic Config ', () => {
       secondDiskImageId: '',
       secondDiskType: '',
       secondDiskSize: 0,
+      filesystemId: '',
+      filesystemName: '',
       user: '',
       sshPublicKey: '',
       resourcesSpec: {
@@ -51,6 +53,8 @@ test('add secondary disk', () => {
       secondDiskImageId: 'secondDiskImageId',
       secondDiskType: 'secondDiskType',
       secondDiskSize: parseMemory('30Gb'),
+      filesystemId: '',
+      filesystemName: '',
       user: '',
       sshPublicKey: '',
       resourcesSpec: {
@@ -81,6 +85,8 @@ test('add secondary disk without image-id throw error', () => {
       secondDiskImageId: '',
       secondDiskType: 'secondDiskType',
       secondDiskSize: parseMemory('30Gb'),
+      filesystemId: '',
+      filesystemName: '',
       user: 'user',
       sshPublicKey: 'sshPublicKey',
       resourcesSpec: {

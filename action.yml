@@ -69,6 +69,12 @@ inputs:
   disk2-size:
     required: false
     description: 'Second disk size. Format: `\\d(Mb|Gb)`. E.g. 30Gb'
+  filesystem-id:
+    required: false
+    description: 'Network filesystem id'
+  filesystem-name:
+    required: false
+    description: 'Filesystem name'
   zone-id:
     required: false
     description: 'Zone ID'

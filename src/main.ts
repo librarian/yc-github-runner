@@ -5,6 +5,8 @@ import {Instance, IpVersion} from 'librarian-nodejs-sdk/dist/generated/yandex/cl
 import {
   AttachedDiskSpec,
   AttachedDiskSpec_Mode,
+  AttachedFilesystemSpec,
+  AttachedFilesystemSpec_Mode,
   CreateInstanceMetadata,
   CreateInstanceRequest,
   DeleteInstanceRequest,
@@ -85,6 +87,7 @@ async function createVm(
   core.startGroup('Create VM');
 
   const secondaryDiskSpecs: AttachedDiskSpec[] = [];
+  const filesystemSpecs: AttachedFilesystemSpec[] = [];
 
   if (config.input.secondDiskSize > 0) {
     secondaryDiskSpecs.push(
@@ -96,6 +99,16 @@ async function createVm(
           size: config.input.secondDiskSize,
           typeId: config.input.secondDiskType,
         },
+      }),
+    );
+  }
+
+  if (config.input.filesystemId) {
+    filesystemSpecs.push(
+      AttachedFilesystemSpec.fromPartial({
+        mode: AttachedFilesystemSpec_Mode.READ_WRITE,
+        deviceName: config.input.filesystemName,
+        filesystemId: config.input.filesystemId,
       }),
     );
   }
@@ -130,6 +143,7 @@ async function createVm(
         },
       },
       secondaryDiskSpecs,
+      filesystemSpecs,
       networkInterfaceSpecs: [
         {
           subnetId: config.input.subnetId,
