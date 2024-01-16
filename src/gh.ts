@@ -81,7 +81,7 @@ export async function removeRunner(config: Config): Promise<void> {
 }
 
 export async function waitForRunnerRegistered(config: Config, label: string): Promise<void> {
-  const timeoutMinutes = 5;
+  const timeoutMinutes = 60;
   const retryIntervalSeconds = 10;
   const quietPeriodSeconds = 30;
   let waitSeconds = 0;
